@@ -1,0 +1,55 @@
+/* Ocultar el menú por defecto */
+.menu-items {
+    display: none;
+  }
+  
+  /* Mostrar el menú al hacer clic en el botón */
+  .hamburger-menu:hover .menu-items {
+    display: block;
+  }
+  
+  /* Estilos del botón hamburguesa */
+  .hamburger-menu {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin: 10px auto;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Animación del botón hamburguesa */
+  .hamburger-menu:hover .bar:first-of-type {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger-menu:hover .bar:last-of-type {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Estilos del menú */
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .menu-items li {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .menu-items li a {
+    text-decoration: none;
+    color: #333;
+  }
+  

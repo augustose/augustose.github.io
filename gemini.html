@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Hamburger Menu</title>
+    <link rel="stylesheet" href="gstyle.css">
+</head>
+<body>
+    <header>
+        <h1>Your Website Title</h1>
+        <label for="menu-toggle">
+            <span class="menu-icon">&#9776;</span>
+        </label>
+    </header>
+    <nav id="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>This is the main content of the page.</p>
+    </main>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navigation = document.getElementById('navigation');
+
+        menuToggle.addEventListener('click', () => {
+            navigation.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

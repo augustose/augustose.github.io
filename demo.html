@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            display: none;
+            background-color: #555;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            top: 60px;
+            z-index: 1;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        label {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 2;
+        }
+
+        #menu-icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                top: 50px;
+            }
+
+            label {
+                display: block;
+            }
+
+            #menu-icon:checked + nav {
+                display: block;
+            }
+
+            nav a {
+                border-bottom: 1px solid #777;
+            }
+
+            #menu-icon:checked + nav a {
+                display: block;
+            }
+
+            #menu-icon:checked + nav a:first-child {
+                border-top: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span>Hamburger Menu Example</span>
+        <label for="menu-icon">&#9776;</label>
+        <input type="checkbox" id="menu-icon">
+    </header>
+
+    <nav>
+        <a href="demo.html">Home</a>
+        <a href="index.html">About</a>
+    </nav>
+
+    <main>
+        <!-- Your content goes here -->
+        <p>This is a sample content area.</p>
+    </main>
+
+</body>
+</html>
